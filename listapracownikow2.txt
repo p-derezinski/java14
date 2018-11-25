@@ -1,0 +1,2 @@
+Paweł Dereziński, id: 101, email: pawelder, pensja: 3333.0 zł.
+Mariusz Trela, id: 102, email: treliusz, pensja: 4444.0 zł.
