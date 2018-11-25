@@ -1,6 +1,9 @@
 package pl.sdacademy.java14poz.listopad24.zadanie4firma;
 
+import pl.sdacademy.java14poz.listopad24.zadanie4firma.writer.PracownikWriter;
 import pl.sdacademy.java14poz.listopad24.zadanie4firma.writer.TxtPracownikWriter;
+import pl.sdacademy.java14poz.listopad24.zadanie4firma.writer.WriterFactory;
+import pl.sdacademy.java14poz.listopad24.zadanie4firma.writer.XmlPracownikWriter;
 
 import java.io.*;
 import java.util.Scanner;
@@ -55,8 +58,13 @@ public class Application {
 
                     System.out.print("Podaj nazwę pliku do zapisu listy pracowników: ");
                     String fileName = scanner.next();
-                    TxtPracownikWriter writer = new TxtPracownikWriter(fileName);
-                    writer.write(firma.getPracownicy());
+                    System.out.println("Zapisuje do pliku " + fileName + "...");
+                    PracownikWriter writer = WriterFactory.createWriter(fileName);
+                    if (writer != null) {
+                        writer.write(firma.getPracownicy());
+                    } else {
+                        System.out.println("Nie obsługiwane rozszerzenie. Obsługiwane to tylko .txt i .xml");
+                    }
 
                     break;
                 case 0:
