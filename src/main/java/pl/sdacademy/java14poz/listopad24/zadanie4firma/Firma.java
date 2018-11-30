@@ -6,7 +6,7 @@ public class Firma {
 
     private String name;
     private Pracownik[] pracownicy;
-    private static final int MAX_EMPLOYEES_COUNT = 2;
+    private static final int MAX_EMPLOYEES_COUNT = 4;
     private int aktualnaIlosc = 0;
 
     public Firma(String name) {
@@ -36,8 +36,22 @@ public class Firma {
 //        return false;
     }
 
-    public boolean usunPracownika(Pracownik pracownik) {
-        return false;
+    public boolean usunPracownika(String nazwisko) {
+        int pozycjaUsuwana = -1;
+        int pozycjaOstatnia = getPracownicy().length - 1;
+        for (int i = 0; i < getPracownicy().length; i++) {
+            if (pracownicy[i].getNazwisko().equals(nazwisko)) {
+                pozycjaUsuwana = i;
+                pracownicy[i] = pracownicy[pozycjaOstatnia];
+                pracownicy[pozycjaOstatnia] = null;
+                aktualnaIlosc--;
+                break;
+            }
+        }
+        if (pozycjaUsuwana == -1) {
+            return false;
+        }
+        return true;
     }
 
     public boolean usunPracownika(int id) {

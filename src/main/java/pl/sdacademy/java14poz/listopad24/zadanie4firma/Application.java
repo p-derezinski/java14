@@ -48,7 +48,7 @@ public class Application {
                     wstawPracownika(firma);
                     break;
                 case 3:
-                    System.out.println("Implementacja w przygotowaniu");
+                    usunPracownikaZFirmy(firma);
                     break;
                 case 4:
                     wczytajZPliku();
@@ -72,6 +72,16 @@ public class Application {
                     break;
             }
         }
+    }
+
+    private static void usunPracownikaZFirmy(Firma firma) {
+        System.out.print("Podaj nazwisko pracownika, którego chcesz usunąć: ");
+        String nazwisko = scanner.next();
+        boolean wynik = firma.usunPracownika(nazwisko);
+        String message = wynik ?
+                "Pracownik o nazwisku " + nazwisko + " został usunięty."
+                : "W firmie " + firma.getName() + " nie pracuje osoba o nazwisku " + nazwisko + ".";
+        System.out.println(message);
     }
 
     private static void wyswietlPracownikowWersja3(Firma firma) {
@@ -110,7 +120,7 @@ public class Application {
 
 //                    // operator trójargumentowy
 //                    System.out.println(wynik == true
-//                                        ? "Nowy  pracownik zostal dodany"
+//                                        ? "Nowy pracownik zostal dodany"
 //                                        : "Nie udało się dodać pracownika");
 //
 //                    // albo zapis jak poniżej, wynik działania będzie taki sam

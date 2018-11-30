@@ -1,5 +1,8 @@
 package pl.sdacademy.java14poz.listopad24.zadanie4firma;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Pracownik {
 
     private String imie;
@@ -7,6 +10,8 @@ public class Pracownik {
     private double pensja;
     private String email;
     private int id;
+
+    private Pracownik() {}
 
     public Pracownik(String imie, String nazwisko, double pensja, String email, int id) {
         this(imie, nazwisko, pensja, id);             // wykorzystujemy drugi konstruktor, żeby zrobić inicjalizację; dzięki temu mamy jedno miejsce do modyfikacji; jest to zgodne z zasadą DRY - Don't Repeat Yourself

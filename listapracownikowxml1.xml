@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pracownik>
+    <email>emailtest</email>
+    <id>101</id>
+    <imie>Jan</imie>
+    <nazwisko>Kowalski</nazwisko>
+    <pensja>3000.0</pensja>
+</pracownik>
