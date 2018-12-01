@@ -1,4 +1,4 @@
-package pl.sdacademy.java14poz.zadaniadodomu;
+package pl.sdacademy.java14poz.zadaniadodomu.programyjednoklasowe;
 
 public class StatystykiDlaTablicy {
 

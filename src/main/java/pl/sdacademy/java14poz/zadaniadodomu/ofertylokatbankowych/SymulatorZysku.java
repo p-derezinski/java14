@@ -12,7 +12,7 @@ public class SymulatorZysku {
         //OfertaPodstawowa oferta1 = new OfertaPodstawowa(3, Kapitalizacja.MIESIECZNA);
         //OfertaPodstawowa oferta3 = new OfertaSpecjalna(3, Kapitalizacja.MIESIECZNA);
 
-        double oprocentowanie = 3;
+        double oprocentowanie = 2;
 
         listaOfert.add(new OfertaPodstawowa(oprocentowanie, Kapitalizacja.MIESIECZNA));
         listaOfert.add(new OfertaPodstawowa(oprocentowanie, Kapitalizacja.KWARTALNA));
@@ -22,7 +22,7 @@ public class SymulatorZysku {
         listaOfert.add(new OfertaSpecjalna(oprocentowanie, Kapitalizacja.ROCZNA));
 
         double depozyt = 1000;
-        int czasLokaty = 13;
+        int czasLokaty = 60;
 
         for (OfertaPodstawowa oferta : listaOfert) {
             obliczZysk(oferta, depozyt, czasLokaty);
