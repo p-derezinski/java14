@@ -7,7 +7,7 @@ public class Wisielec {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String haslo = "ciacho";
+        String haslo = "sobota";
         int dlugosc = haslo.length();
         char[] chars = new char[dlugosc];
         for (int i = 0; i < dlugosc; i++) {

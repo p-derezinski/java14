@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pracownicy>
+    <pracownicy>
+        <email>grgerge</email>
+        <id>111</id>
+        <imie>Pracownik_testowy_do_xml_1</imie>
+        <nazwisko>fddsfsdf</nazwisko>
+        <pensja>3434.0</pensja>
+    </pracownicy>
+    <pracownicy>
+        <email>yyyyyyyy</email>
+        <id>222</id>
+        <imie>Pracownik_testowy_do_xml_2</imie>
+        <nazwisko>gfdgdd</nazwisko>
+        <pensja>3345.0</pensja>
+    </pracownicy>
+</pracownicy>

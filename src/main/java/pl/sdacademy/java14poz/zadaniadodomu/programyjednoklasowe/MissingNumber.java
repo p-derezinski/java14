@@ -12,7 +12,6 @@ public class MissingNumber {
         printArray(orderedArray);
         isThereAMissingNumber(findMissingNumber(orderedArray));
         System.out.println("Pozdrowienia dla Radka! ;)");
-
     }
 
     public static void printArray(int[] array) {

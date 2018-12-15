@@ -4,6 +4,11 @@ public class Testowanie {
 
     public static void main(String[] args) {
 
+        double testowy = 5.3332;
+        String testowy2 = String.format("%.2f", testowy);
+        System.out.println(testowy2);
+        System.out.println("\n\n\n\n\n\n\n\n\n");
+
 //        System.out.println(" ______");
 //        System.out.println("|      |");
 //        System.out.println("|      O");
